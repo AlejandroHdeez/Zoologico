@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "db681148-89bf-432f-a364-cd9da409f2f7",
+		"name": "Rutas Zoologico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Guardar Animales",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Mono",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "Mamifero",
+							"type": "text"
+						},
+						{
+							"key": "edad",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "nombreCientifico",
+							"value": "Moneus",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3789/rutas/saveAnimales",
+					"host": [
+						"localhost"
+					],
+					"port": "3789",
+					"path": [
+						"rutas",
+						"saveAnimales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Animales",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:3789/rutas/listarAnimales",
+					"host": [
+						"localhost"
+					],
+					"port": "3789",
+					"path": [
+						"rutas",
+						"listarAnimales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Animales",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tipo",
+							"value": "Mamifero",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "nombreCientifico",
+							"value": "Moneus",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3789/rutas/buscarAnimales",
+					"host": [
+						"localhost"
+					],
+					"port": "3789",
+					"path": [
+						"rutas",
+						"buscarAnimales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar Encargados",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Guillermo Hernandez",
+							"type": "text"
+						},
+						{
+							"key": "cargo",
+							"value": "Cuidador",
+							"type": "text"
+						},
+						{
+							"key": "celular",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "animalesaCargo",
+							"value": "5cc314a7f2e024373c601565",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3789/rutas/saveEncargados",
+					"host": [
+						"localhost"
+					],
+					"port": "3789",
+					"path": [
+						"rutas",
+						"saveEncargados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Encargados",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Alejandro Hernandez",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3789/rutas/buscarEncargados/5cc3345cd3df1a2020cb98b4",
+					"host": [
+						"localhost"
+					],
+					"port": "3789",
+					"path": [
+						"rutas",
+						"buscarEncargados",
+						"5cc3345cd3df1a2020cb98b4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Encargados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3789/rutas/listarEncargados",
+					"host": [
+						"localhost"
+					],
+					"port": "3789",
+					"path": [
+						"rutas",
+						"listarEncargados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar Animales con Encargados",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "animal",
+							"value": "5cc31409c0d1be1998be49cc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3789/rutas/saveAnimalesEncargados/5cc34326d6a64e4eac13fc6c",
+					"host": [
+						"localhost"
+					],
+					"port": "3789",
+					"path": [
+						"rutas",
+						"saveAnimalesEncargados",
+						"5cc34326d6a64e4eac13fc6c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

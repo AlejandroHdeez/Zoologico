@@ -1,0 +1,33 @@
+<div class="Fondo">
+<div class="row">
+    <div class="col-md-6 mx-auto mt-5">
+        <div class="transparente">
+            <div class="card-body">
+                <h1 class="text-center" style="color: #333333">¡Bienvenido {{title}}!</h1>
+                <div class="form-group">
+                    <label for="email" style="color: #333333">Nombre de Ubicacion:</label>
+                    <p><input type="text" [(ngModel)]="nombreDeUbicacion" (keyup)="mostrarNombre()"
+                            class="form-control"></p>
+                    <p> Resultado: {{nombreDeUbicacion}}</p>
+                </div>
+                <div class="form-group">
+                    <div *ngIf="miUbicacion">
+                        <h4>Datos de la ubicacion traidos desde el hijo</h4>
+                        <ol>
+                            <li> {{ miUbicacion.nombre }} </li>
+                        </ol>
+                    </div>
+                    <p *ngIf="nombreDeUbicacion">
+                        <ubicacion [nombre]="nombreDeUbicacion" (pasameLosDatos)="verDatosUbicacion($event)">
+                        </ubicacion>
+                    </p>
+                </div>
+                <br>
+                <div style="text-align:center">
+                        <img width="300" alt="Angular Logo" src="assets/imagenes/logo2.png">
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

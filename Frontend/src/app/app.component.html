@@ -1,0 +1,6 @@
+<app-navbar></app-navbar>
+<p *ngIf="correo">Bienvenido: {{correo}}</p>
+<div *ngIf="correo">
+<button (click)="eliminarCorreo()">Eliminar Correo</button>
+</div>
+<router-outlet></router-outlet>
