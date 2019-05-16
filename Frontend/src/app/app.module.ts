@@ -5,25 +5,19 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TiendaComponent } from './components/tienda/tienda.component';
-import { UbicacionComponent } from './components/ubicacion/ubicacion.component';
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ProductosComponent } from './components/productos/productos.component';
-import { ContactoComponent } from './components/contacto/contacto.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
+
 import { RestService } from './services/rest.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TiendaComponent,
-    UbicacionComponent,
     NavbarComponent,
     InicioComponent,
-    ProductosComponent,
-    ContactoComponent,
-    NotFoundComponent
+    ProductosComponent
   ],
   imports: [
     BrowserModule,

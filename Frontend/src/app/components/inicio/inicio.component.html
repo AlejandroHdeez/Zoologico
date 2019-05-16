@@ -2,17 +2,104 @@
 <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
 <div class='login'>
   <br>
-  <h2 class="h3 mb-3 font-weight-normal">Modulo de Persona</h2>
-  <form #formularioRegistro="ngForm" (ngSubmit)="onSubmit()">
-    <div class="alert alert-danger" role="alert"></div>
-    <br><input type="text" [(ngModel)]="teacher.name" name="name" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Primer Nombre"><br>
-    <input type="text" [(ngModel)]="teacher.surname" name="surname" class="form-control" id="exampleInputSurname" placeholder="Apellidos"><br>
-    <input type="text" [(ngModel)]="teacher.email" name="email" class="form-control" id="exampleInputEmail" placeholder="Email"><br>
-    <input type="password" [(ngModel)]="teacher.password" name="password" class="form-control" id="exampleInputPassword" placeholder="Password"><br>
-    <br><br>
-    <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
-    <br>
-  </form>
+  <h2 class="h3 mb-3 font-weight-normal">Animales</h2>
+  <div class="container">
+      <form>
+          <div class="cajita form-row">
+            <div class="input-group mb-3 backdiv">
+              <input class="form-control" style="z-index: 0;" #myInput [(ngModel)]="search" (input)="filtrar()"
+                name="search" type="text" placeholder="Ingresa el animal que deseas buscar">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" style="z-index: 0;" type="submit"><i class='fa fa-search'
+                    style='font-size:12px; margin-right: 5px;'></i>Buscar</button>
+              </div>
+            </div>
+          </div>
+        </form>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <hr style="background-color: ivory;"><br>
+        <div class="row"><br>
+            <div class="card mb-3" style="max-width: 540px; min-height: 223px; border-radius: 10px;">
+              <div class="row">
+                <div class="col-md-4">
+                  <img style="padding: 25px"
+                    src="https://es.calcuworld.com/wp-content/uploads/sites/2/2018/04/cantidad-crias-tiene-lobos.jpg" class="card-img">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title text">Lobo</h5>
+                    <p class="card-text text-gray"><i class="fa fa-info-circle"
+                        style="font-size:16px; color: rgb(158, 158, 158); margin-right: 3px;"></i>
+                        El lobo es un mamífero que pertenece a la familia de los carnívoros y cuenta con varias subespecies. 
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3" style="max-width: 540px; min-height: 223px; border-radius: 10px;">
+              <div class="row">
+                <div class="col-md-4">
+                  <img style="padding: 25px"
+                    src="https://www.panorama.com.ve/__export/1525784863116/sites/panorama/img/2018/05/08/osososos6.png_1058132788.png" class="card-img">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title text">Oso</h5>
+                    <p class="card-text text-gray"><i class="fa fa-info-circle"
+                        style="font-size:16px; color: rgb(158, 158, 158); margin-right: 3px;"></i>
+                        En cualquier especie de oso, los machos son más grandes que las hembras. 
+                        El oso más pequeño, el Sun Bear de Asia, pesa apenas 27-65 kilos y mide 120-150 metros de largo. 
+                        Sus orejas, ojos y cola son pequeñas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div><br>
+    <hr style="background-color: ivory;">
+    <button type="button" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-paw"> Agregar Animales</i></button>
+  </div>
+  
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text" id="exampleModalLabel">Creacion de animal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <div class="col-md-12 col-sm-12">
+  
+              <!-- Formulario para ingresar datos del animal -->
+              <form>
+                <br><input type="text"  class="form-control"  placeholder="Nombre"><br>
+                <input type="text"   class="form-control"  placeholder="Tipo"><br>
+                <input type="text"  class="form-control"  placeholder="Edad"><br>
+                <input type="text"   class="form-control"  placeholder="Nombre Cientifico"><br>
+              </form>
+
+             <!-- BOTONES FOOTER DEL MODAL -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+            </div>
+  
+  
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
 
 
